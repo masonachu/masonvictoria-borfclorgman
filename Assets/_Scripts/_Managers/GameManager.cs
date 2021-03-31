@@ -39,12 +39,10 @@ public class GameManager : MonoBehaviour
         CheckPuzzleStatus();
 
         //Change this so its activated after initial speech
-        if(!clipboardActive && OculusRight.secondary)
-        {
-            SpawnClipboardAtTransform();
-            Checkboxes = GameObject.FindGameObjectsWithTag("Checkboxes");
-            clipboardActive = true;
-        }
+        //if(!clipboardActive && OculusRight.secondary)
+        //{
+        //    SpawnClipboardAtTransform();
+        //}
     }
 
     void CheckPuzzleStatus()
@@ -62,8 +60,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void SpawnClipboardAtTransform()
+    public void SpawnClipboardAtTransform()
     {
         GameObject Clipboard = Instantiate(clipboardPrefab, clipboardSpawn.position, clipboardSpawn.rotation);
+        Checkboxes = GameObject.FindGameObjectsWithTag("Checkboxes");
+        clipboardActive = true;
     }
 }
