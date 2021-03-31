@@ -245,7 +245,6 @@ GameObject:
   - component: {fileID: 8071837630359932185}
   - component: {fileID: 5897489476911417137}
   - component: {fileID: 8071837630359932187}
-  - component: {fileID: 8071837630359932186}
   - component: {fileID: 1324238351426621483}
   m_Layer: 0
   m_Name: characterMedium
@@ -316,31 +315,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8071837630359932186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4249232535738620045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69ac7ab3ba91f41448cd97166305876c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Animator: {fileID: 0}
-  CameraObj: {fileID: 0}
-  emit: {fileID: 0}
-  uiImage: {fileID: 0}
-  playerClose: 0
-  LookObj: {fileID: 0}
-  ikActive: 1
-  OculusLeft: {fileID: 0}
-  OculusRight: {fileID: 0}
-  dialogue: 
-  hasDialogue: 0
-  hasSpoken: 0
-  isSpeaking: 0
 --- !u!114 &1324238351426621483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,9 +337,6 @@ MonoBehaviour:
   OculusLeft: {fileID: 0}
   OculusRight: {fileID: 0}
   dialogue: event:/Dialogue/Bob Dynamic
-  hasDialogue: 0
-  hasSpoken: 0
-  isSpeaking: 0
 --- !u!1 &4249232535738620047
 GameObject:
   m_ObjectHideFlags: 0

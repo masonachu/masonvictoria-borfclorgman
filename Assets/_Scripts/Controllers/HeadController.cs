@@ -16,7 +16,7 @@ public class HeadController : MonoBehaviour
 
     [HideInInspector] public bool playerClose = false;
     [HideInInspector] public Transform LookObj = null;
-    [HideInInspector] public bool ikActive = false;
+    [HideInInspector] public bool ikActive = true;
 
     protected float lookAt = 2.0f;
     protected float lookAway = 0.0f;
@@ -42,6 +42,7 @@ public class HeadController : MonoBehaviour
         OculusRight = GameObject.Find("Right Hand").GetComponent<OculusInput>();
         CameraObj = GameObject.Find("VR Camera");
         LookObj = CameraObj.transform;
+        ikActive = true;
 
         uiImage.enabled = false;
         InitializeDialogue();

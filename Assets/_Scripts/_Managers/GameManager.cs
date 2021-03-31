@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
     public OculusInput OculusLeft;
     public OculusInput OculusRight;
 
+    [Header("Debug")]
+    public bool DebugClipboard;
+
     private bool allTrue = false;
     private bool clipboardActive = false;
 
@@ -38,11 +41,12 @@ public class GameManager : MonoBehaviour
     {
         CheckPuzzleStatus();
 
-        //Change this so its activated after initial speech
-        //if(!clipboardActive && OculusRight.secondary)
-        //{
-        //    SpawnClipboardAtTransform();
-        //}
+        //Change this so its activated after initial speech ... done!
+        //kept for debug purposes
+        if(DebugClipboard && !clipboardActive && OculusRight.secondary)
+        {
+            SpawnClipboardAtTransform();
+        }
     }
 
     void CheckPuzzleStatus()
@@ -62,8 +66,11 @@ public class GameManager : MonoBehaviour
 
     public void SpawnClipboardAtTransform()
     {
+        if(!clipboardActive)
+        {
         GameObject Clipboard = Instantiate(clipboardPrefab, clipboardSpawn.position, clipboardSpawn.rotation);
         Checkboxes = GameObject.FindGameObjectsWithTag("Checkboxes");
         clipboardActive = true;
+        }
     }
 }

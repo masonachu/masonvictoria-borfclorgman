@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class ReceptionistController : HeadController
 {
-    private GameManager GM;
+    public GameManager GM;
 
     private IEnumerator coroutine;
     public bool coroutineActive;
     public bool clipboardLoaded;
+
+    protected override void Start()
+    {
+        base.Start();
+        GM = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
 
     protected override void ConversationCheck()
     {

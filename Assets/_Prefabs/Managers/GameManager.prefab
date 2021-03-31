@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6916578344549471904
+--- !u!1 &3332054287137223507
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6916578344549471911}
-  m_Layer: 0
-  m_Name: ClipboardSpawnPosition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6916578344549471911
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6916578344549471904}
-  m_LocalRotation: {x: -0.0016776376, y: -0.9912368, z: 0.0022079211, w: 0.13206811}
-  m_LocalPosition: {x: -10.754, y: -6.152, z: -12.255}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6916578345217724487}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 179.775, y: 15.179001, z: 180.224}
---- !u!1 &6916578345217724480
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6916578345217724487}
-  - component: {fileID: 6916578345217724486}
+  - component: {fileID: 3332054287137223508}
+  - component: {fileID: 3332054287137223509}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -47,35 +17,69 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6916578345217724487
+--- !u!4 &3332054287137223508
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6916578345217724480}
+  m_GameObject: {fileID: 3332054287137223507}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -150.57184, y: 50.630978, z: 74.99506}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6916578344549471911}
+  - {fileID: 3332054287638001076}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6916578345217724486
+--- !u!114 &3332054287137223509
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6916578345217724480}
+  m_GameObject: {fileID: 3332054287137223507}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab6965735813ef94fb5214880ae8580d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzles: []
-  missionStatus: 
+  Puzzles: []
+  Checkboxes: []
+  puzzleStatus: 
+  checkmarks: 
   clipboardPrefab: {fileID: 2007316137066489145, guid: c7d2530440aa6c3408caa37328819192,
     type: 3}
-  clipboardSpawn: {fileID: 6916578344549471911}
+  clipboardSpawn: {fileID: 3332054287638001076}
+  OculusLeft: {fileID: 0}
+  OculusRight: {fileID: 0}
+--- !u!1 &3332054287638001075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3332054287638001076}
+  m_Layer: 0
+  m_Name: ClipboardSpawnPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3332054287638001076
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3332054287638001075}
+  m_LocalRotation: {x: -0, y: -0.9914449, z: -0, w: -0.13052617}
+  m_LocalPosition: {x: 156.10583, y: -31.224724, z: -180.12106}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3332054287137223508}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -195, z: 0}

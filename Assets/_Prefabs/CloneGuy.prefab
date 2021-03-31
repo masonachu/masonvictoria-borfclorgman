@@ -26,11 +26,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 972833225551869933}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.836, z: 0}
+  m_LocalPosition: {x: 0, y: 0.83599997, z: 0}
   m_LocalScale: {x: 23.419554, y: 23.419554, z: 23.419554}
   m_Children: []
-  m_Father: {fileID: 8457383675863656796}
-  m_RootOrder: 2
+  m_Father: {fileID: 8017023132664352483}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &6960776826997663468
 SphereCollider:
@@ -68,9 +68,6 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
-  OcclusionEnabled: 0
-  OcclusionParameterName: 
-  OcclusionIntensity: 1
 --- !u!1 &2719773835105188380
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,7 +273,6 @@ Transform:
   m_Children:
   - {fileID: 620472648117082852}
   - {fileID: 8017023132664352483}
-  - {fileID: 8122652257869726418}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -315,9 +311,6 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
-  OcclusionEnabled: 0
-  OcclusionParameterName: 
-  OcclusionIntensity: 1
 --- !u!65 &315930392586128767
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -385,9 +378,6 @@ MonoBehaviour:
   OculusLeft: {fileID: 0}
   OculusRight: {fileID: 0}
   dialogue: event:/Dialogue/Clone Dynamic
-  hasDialogue: 0
-  hasSpoken: 0
-  isSpeaking: 0
 --- !u!1001 &1087309159572978959
 PrefabInstance:
   m_ObjectHideFlags: 0
