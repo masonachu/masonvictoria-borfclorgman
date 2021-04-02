@@ -607,7 +607,6 @@ GameObject:
   - component: {fileID: 5089320647590847539}
   - component: {fileID: 7456866737068338715}
   - component: {fileID: 5089320647590847537}
-  - component: {fileID: 5089320647590847536}
   - component: {fileID: 2649427641509116536}
   m_Layer: 0
   m_Name: characterMedium
@@ -679,28 +678,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5089320647590847536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 890663648332165543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69ac7ab3ba91f41448cd97166305876c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Animator: {fileID: 0}
-  CameraObj: {fileID: 0}
-  emit: {fileID: 0}
-  uiImage: {fileID: 0}
-  playerClose: 0
-  LookObj: {fileID: 0}
-  ikActive: 1
-  OculusLeft: {fileID: 0}
-  OculusRight: {fileID: 0}
-  dialogue: event:/null
 --- !u!114 &2649427641509116536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -713,13 +690,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0f8839034ad1b948bcc790c847225b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ikActive: 1
+  hideCanvas: 0
   Animator: {fileID: 0}
   CameraObj: {fileID: 0}
   emit: {fileID: 0}
   uiImage: {fileID: 0}
   playerClose: 0
   LookObj: {fileID: 0}
-  ikActive: 0
   OculusLeft: {fileID: 0}
   OculusRight: {fileID: 0}
   dialogue: event:/null

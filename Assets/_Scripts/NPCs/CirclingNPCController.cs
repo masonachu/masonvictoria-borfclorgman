@@ -7,7 +7,51 @@ using UnityEngine.UI;
 
 public class CirclingNPCController : HeadController
 {
+    public PuzzleStatus PuzzleStatus;
+
+    [Header("Manager Specific")]
+    [EventRef] public string convo1;
+    [EventRef] public string convo2;
+    [EventRef] public string enterZone;
+
+    private bool hasChanged = false;
     private Quaternion targetRotation;
+
+    protected override void Start()
+    {
+        base.Start();
+        PuzzleStatus = GameObject.Find("SaxPuzzleZone").GetComponent<PuzzleStatus>();
+    }
+
+    protected override void Update()
+    {
+        if (PuzzleStatus.isComplete && !hasChanged)
+        {
+            emit.ChangeEvent(convo2);
+            hasChanged = true;
+            hasSpoken = false;
+        }
+        base.Update();
+    }
+
+    protected override void InitializeDialogue()
+    {
+        if (this.gameObject.CompareTag("HasDialogue") && dialogue != null)
+        {
+            emit = gameObject.AddComponent<StudioEventEmitter>();
+            emit.ChangeEvent(convo1);
+            hasDialogue = true;
+        }
+        else
+        {
+            hasDialogue = false;
+        }
+
+        if (this.gameObject.CompareTag("HasDialogue") && dialogue == null)
+        {
+            Debug.Log("There is no dialogue in the string!");
+        }
+    }
 
     protected override void OnTriggerEnter(Collider other)
     {
@@ -32,6 +76,9 @@ public class CirclingNPCController : HeadController
             {
                 //if character has dialogue, enable UI image and set PlayerClose
                 uiImage.enabled = true;
+
+                //say woah when he sees the player
+                RuntimeManager.PlayOneShot(enterZone, transform.position);
             }
             else
             {

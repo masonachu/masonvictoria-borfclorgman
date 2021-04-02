@@ -68,9 +68,6 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
-  OcclusionEnabled: 0
-  OcclusionParameterName: 
-  OcclusionIntensity: 1
 --- !u!1 &2976456755063089770
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,7 +957,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.68
+  m_Radius: 3
   m_Center: {x: 0, y: 1.05, z: 1.48}
 --- !u!95 &2976456755919895217
 Animator:
@@ -993,19 +990,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a9507798db51b04c8dc492dd6325b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ikActive: 1
+  hideCanvas: 0
   Animator: {fileID: 0}
   CameraObj: {fileID: 0}
   emit: {fileID: 0}
   uiImage: {fileID: 0}
   playerClose: 0
   LookObj: {fileID: 0}
-  ikActive: 0
   OculusLeft: {fileID: 0}
   OculusRight: {fileID: 0}
   dialogue: event:/Dialogue/Jorbadiah Convo
-  hasDialogue: 0
-  hasSpoken: 0
-  isSpeaking: 0
   PuzzleStatus: {fileID: 0}
   CryingEmitter: {fileID: 0}
 --- !u!1 &7184046604371701545

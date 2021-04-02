@@ -417,7 +417,7 @@ MonoBehaviour:
   sourceProjectPath: G:/GitHub/masonthesis-fmodsession/masonthesis-fmodsession.fspro
   sourceBankPath: FMOD/Desktop
   SourceBankPathUnformatted: 
-  AutomaticEventLoading: 1
+  AutomaticEventLoading: 0
   BankLoadType: 0
   AutomaticSampleLoading: 0
   EncryptionKey: 
@@ -441,7 +441,12 @@ MonoBehaviour:
   - Dialogue
   - Music
   - Objects
-  BanksToLoad: []
+  BanksToLoad:
+  - /Ambience.bank
+  - /Dialogue.bank
+  - /Master.bank
+  - /Master.strings.bank
+  - /Objects.bank
   LiveUpdatePort: 2020
   EnableMemoryTracking: 0
   AndroidUseOBB: 0

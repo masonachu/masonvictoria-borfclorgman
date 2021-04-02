@@ -243,9 +243,6 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
-  OcclusionEnabled: 0
-  OcclusionParameterName: 
-  OcclusionIntensity: 1
 --- !u!114 &7341058066202355904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,19 +326,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69ac7ab3ba91f41448cd97166305876c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ikActive: 1
+  hideCanvas: 0
   Animator: {fileID: 0}
   CameraObj: {fileID: 0}
   emit: {fileID: 0}
   uiImage: {fileID: 0}
   playerClose: 0
   LookObj: {fileID: 0}
-  ikActive: 1
   OculusLeft: {fileID: 0}
   OculusRight: {fileID: 0}
   dialogue: event:/Dialogue/Tests/Bob
-  hasDialogue: 0
-  hasSpoken: 0
-  isSpeaking: 0
 --- !u!1 &6968594337538322226
 GameObject:
   m_ObjectHideFlags: 0

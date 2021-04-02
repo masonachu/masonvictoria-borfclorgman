@@ -7,6 +7,10 @@ using UnityEngine.UI;
 
 public class HeadController : MonoBehaviour
 {
+    [Header("Debug")]
+    public bool ikActive = true;
+    public bool hideCanvas;
+
     [Header("References")]
 
     public Animator Animator;
@@ -16,7 +20,6 @@ public class HeadController : MonoBehaviour
 
     [HideInInspector] public bool playerClose = false;
     [HideInInspector] public Transform LookObj = null;
-    [HideInInspector] public bool ikActive = true;
 
     protected float lookAt = 2.0f;
     protected float lookAway = 0.0f;
@@ -97,7 +100,7 @@ public class HeadController : MonoBehaviour
             playerClose = true;
 
             //if the character has dialogue
-            if (hasDialogue)
+            if (hasDialogue && !hideCanvas)
             {
                 //if character has dialogue, enable UI image and set PlayerClose
                 uiImage.enabled = true;

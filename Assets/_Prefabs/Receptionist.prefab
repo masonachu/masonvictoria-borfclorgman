@@ -57,16 +57,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25eef06d7d54eed41804baafd592db1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ikActive: 1
+  hideCanvas: 0
   Animator: {fileID: 0}
   CameraObj: {fileID: 0}
   emit: {fileID: 0}
   uiImage: {fileID: 0}
   playerClose: 0
   LookObj: {fileID: 0}
-  ikActive: 1
   OculusLeft: {fileID: 0}
   OculusRight: {fileID: 0}
   dialogue: event:/Dialogue/frontDesk
+  GM: {fileID: 0}
   coroutineActive: 0
   clipboardLoaded: 0
 --- !u!1 &2894453923054888139

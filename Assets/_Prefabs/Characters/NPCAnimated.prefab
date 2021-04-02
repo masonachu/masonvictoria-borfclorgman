@@ -1909,15 +1909,8 @@ MonoBehaviour:
   OculusLeft: {fileID: 0}
   OculusRight: {fileID: 0}
   dialogue: 
-  hasDialogue: 0
-  hasSpoken: 0
-  isSpeaking: 0
-  SaxPuzzle: {fileID: 0}
-  isComplete: 0
-  eventChanged: 0
   SoundZone: {fileID: 0}
-  preCompleteEvent: 
-  postCompleteEvent: 
+  ev: 
 --- !u!1 &7410433279290391530
 GameObject:
   m_ObjectHideFlags: 0
@@ -2172,7 +2165,7 @@ MonoBehaviour:
   OverrideMaxDistance: -1
   OcclusionEnabled: 0
   OcclusionParameterName: Occlusion
-  OcclusionIntensity: 1.5
+  OcclusionIntensity: 4
 --- !u!1 &8047667269699699141
 GameObject:
   m_ObjectHideFlags: 0

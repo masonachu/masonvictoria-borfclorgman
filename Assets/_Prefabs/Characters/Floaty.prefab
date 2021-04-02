@@ -183,6 +183,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 354861626614459268}
+  - component: {fileID: 6822686798336864502}
   m_Layer: 0
   m_Name: root
   m_TagString: Untagged
@@ -205,6 +206,19 @@ Transform:
   m_Father: {fileID: 4536447021358718992}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6822686798336864502
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143045896424892160}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0030435186, y: 0.0030153426, z: 0.0046338085}
+  m_Center: {x: 0.00009982412, y: -0.0019064384, z: -0.0006834392}
 --- !u!1 &620779700262330308
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,19 +854,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69ac7ab3ba91f41448cd97166305876c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ikActive: 0
+  hideCanvas: 0
   Animator: {fileID: 0}
   CameraObj: {fileID: 0}
   emit: {fileID: 0}
   uiImage: {fileID: 0}
   playerClose: 0
   LookObj: {fileID: 0}
-  ikActive: 0
   OculusLeft: {fileID: 0}
   OculusRight: {fileID: 0}
   dialogue: event:/Dialogue/randomNPCs/floaty
-  hasDialogue: 0
-  hasSpoken: 0
-  isSpeaking: 0
 --- !u!1 &5495384578374374606
 GameObject:
   m_ObjectHideFlags: 0
