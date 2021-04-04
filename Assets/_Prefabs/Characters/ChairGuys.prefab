@@ -336,7 +336,7 @@ MonoBehaviour:
   LookObj: {fileID: 0}
   OculusLeft: {fileID: 0}
   OculusRight: {fileID: 0}
-  dialogue: event:/Dialogue/Tests/Bob
+  dialogue: 
 --- !u!1 &6968594337538322226
 GameObject:
   m_ObjectHideFlags: 0

@@ -46,12 +46,8 @@ public class HeadphoneController : MonoBehaviour
 
     public void PlayAudioEvent()
     {
-        if(tip.isConnected && !tip.isPlaying)
-        {
             emit.ChangeEvent(ev);
             emit.Play();
-        }
-
     }
 
     public void StopAudioEvent()

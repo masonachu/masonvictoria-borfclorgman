@@ -727,10 +727,10 @@ GameObject:
   - component: {fileID: 2925349338979020683}
   - component: {fileID: 7089877806666262079}
   - component: {fileID: 7089877806666262077}
-  - component: {fileID: 540213500}
+  - component: {fileID: 8721282116644120602}
   m_Layer: 0
   m_Name: characterMedium
-  m_TagString: HasDialogue
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -784,7 +784,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &540213500
+--- !u!114 &8721282116644120602
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -793,7 +793,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2925349338978923435}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4f2439b03e3f4d42a4db10330702d49, type: 3}
+  m_Script: {fileID: 11500000, guid: 69ac7ab3ba91f41448cd97166305876c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ikActive: 1
@@ -806,9 +806,7 @@ MonoBehaviour:
   LookObj: {fileID: 0}
   OculusLeft: {fileID: 0}
   OculusRight: {fileID: 0}
-  dialogue: event:/Dialogue/CEO Convo 1
-  PuzzleStatus: {fileID: 0}
-  newEvent: event:/Dialogue/CEO Convo 2
+  dialogue: 
 --- !u!1 &2925349338978923437
 GameObject:
   m_ObjectHideFlags: 0
