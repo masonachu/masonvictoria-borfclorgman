@@ -10,7 +10,7 @@ public class SaxophoneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Saxophone = GetComponentInChildren<StudioEventEmitter>();
+        Saxophone = gameObject.transform.Find("Mouthpiece Trigger").GetComponent<StudioEventEmitter>();
     }
 
     // Update is called once per frame

@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 4589668844262610724}
   - component: {fileID: 4589668844262610723}
   - component: {fileID: 774064509}
+  - component: {fileID: 1663145146}
   m_Layer: 8
   m_Name: Saxophone
   m_TagString: Untagged
@@ -243,6 +244,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Saxophone: {fileID: 0}
   isPlaying: 0
+--- !u!114 &1663145146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4589668844262610722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Instruments/SaxophoneCollision
+  PlayEvent: 7
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &4589668844572349819
 GameObject:
   m_ObjectHideFlags: 0

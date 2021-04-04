@@ -137,7 +137,7 @@ public class HeadController : MonoBehaviour
     {
         if (this.gameObject.CompareTag("HasDialogue") && dialogue != null)
         {
-            emit = gameObject.AddComponent<StudioEventEmitter>();
+            emit = gameObject.AddComponent<MyStudioEventEmitter>();
             emit.ChangeEvent(dialogue);
             hasDialogue = true;
         }

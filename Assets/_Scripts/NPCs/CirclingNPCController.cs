@@ -14,8 +14,11 @@ public class CirclingNPCController : HeadController
     [EventRef] public string convo2;
     [EventRef] public string enterZone;
 
+
     private bool hasChanged = false;
     private Quaternion targetRotation;
+    private bool OcclusionEnabled { get { return emit.GetComponent<MyStudioEventEmitter>().OcclusionEnabled; } 
+        set { emit.GetComponent<MyStudioEventEmitter>().OcclusionEnabled = value; } }
 
     protected override void Start()
     {
@@ -38,7 +41,9 @@ public class CirclingNPCController : HeadController
     {
         if (this.gameObject.CompareTag("HasDialogue") && dialogue != null)
         {
-            emit = gameObject.AddComponent<StudioEventEmitter>();
+            emit = gameObject.AddComponent<MyStudioEventEmitter>();
+
+            OcclusionEnabled = true;
             emit.ChangeEvent(convo1);
             hasDialogue = true;
         }

@@ -6,6 +6,7 @@ using FMODUnity;
 
 public class SaxPuzzle : MonoBehaviour
 {
+    public GameManager GM;
     public SaxophoneController saxophoneController;
     public PuzzleStatus puzzleStatus;
     public MyStudioEventEmitter emit;
@@ -13,13 +14,14 @@ public class SaxPuzzle : MonoBehaviour
 
     private bool inTrigger = false;
     private bool playedSax = false;
+    private bool isInstantiated = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        saxophoneController = GameObject.Find("Saxophone").GetComponent<SaxophoneController>();
         puzzleStatus = GetComponent<PuzzleStatus>();
         emit = GetComponent<MyStudioEventEmitter>();
+        GM = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         emit.ChangeEvent(ev);
     }
@@ -46,14 +48,21 @@ public class SaxPuzzle : MonoBehaviour
 
     void PuzzleCheck()
     {
-        if (saxophoneController.isPlaying && inTrigger && !playedSax)
+        if(GM.saxophoneActive && !isInstantiated)
         {
-            playedSax = true;
+            saxophoneController = GameObject.Find("Saxophone(Clone)").GetComponent<SaxophoneController>();
+            isInstantiated = true;
+        }
 
-            puzzleStatus.isComplete = true;
-            puzzleStatus.PuzzleComplete();
-
-            emit.Play();
+        if (isInstantiated)
+        {
+            if (saxophoneController.isPlaying && inTrigger && !playedSax)
+            {
+                playedSax = true;
+                puzzleStatus.isComplete = true;
+                puzzleStatus.PuzzleComplete();
+                emit.Play();        
+            }
         }
     }
 }

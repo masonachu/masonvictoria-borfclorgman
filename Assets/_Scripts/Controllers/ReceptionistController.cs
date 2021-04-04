@@ -71,7 +71,7 @@ public class ReceptionistController : HeadController
             {
                 StopCoroutine(coroutine);
                 coroutineActive = false;
-                print("couroutine cancelled");
+                Debug.Log("couroutine cancelled");
             }
 
             //set bool that this character has spoken already
@@ -85,6 +85,6 @@ public class ReceptionistController : HeadController
         yield return new WaitForSeconds(waitTime);
         GM.SpawnClipboardAtTransform();
         clipboardLoaded = true;
-        print("coroutine complete in " + waitTime);
+        Debug.Log("coroutine complete in " + waitTime);
     }
 }

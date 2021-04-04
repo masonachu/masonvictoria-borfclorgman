@@ -12,6 +12,12 @@ public class GameManager : MonoBehaviour
     [Header("Clipboard References")]
     public GameObject clipboardPrefab;
     public Transform clipboardSpawn;
+    [HideInInspector] public bool saxophoneActive = false;
+
+    [Header("Saxophone References")]
+    public GameObject saxophonePrefab;
+    public Transform saxophoneSpawn;
+    private bool clipboardActive = false;
 
     [Header("Controllers")]
     public OculusInput OculusLeft;
@@ -19,9 +25,9 @@ public class GameManager : MonoBehaviour
 
     [Header("Debug")]
     public bool DebugClipboard;
+    public bool DebugSaxophone;
 
     private bool allTrue = false;
-    private bool clipboardActive = false;
 
 
     // Start is called before the first frame update
@@ -47,6 +53,12 @@ public class GameManager : MonoBehaviour
         {
             SpawnClipboardAtTransform();
         }
+        
+        if(DebugSaxophone && !saxophoneActive && OculusRight.secondary)
+        {
+            SpawnSaxophoneAtTransform();
+            Debug.Log("Saxophone Spawned");
+        }
     }
 
     void CheckPuzzleStatus()
@@ -68,9 +80,18 @@ public class GameManager : MonoBehaviour
     {
         if(!clipboardActive)
         {
-        GameObject Clipboard = Instantiate(clipboardPrefab, clipboardSpawn.position, clipboardSpawn.rotation);
-        Checkboxes = GameObject.FindGameObjectsWithTag("Checkboxes");
-        clipboardActive = true;
+            GameObject Clipboard = Instantiate(clipboardPrefab, clipboardSpawn.position, clipboardSpawn.rotation);
+            Checkboxes = GameObject.FindGameObjectsWithTag("Checkboxes");
+            clipboardActive = true;
+        }
+    }
+    
+    public void SpawnSaxophoneAtTransform()
+    {
+        if(!clipboardActive)
+        {
+            GameObject Saxophone = Instantiate(saxophonePrefab, saxophoneSpawn.position, saxophoneSpawn.rotation);
+            saxophoneActive = true;
         }
     }
 }

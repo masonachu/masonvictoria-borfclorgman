@@ -447,7 +447,7 @@ MonoBehaviour:
   - /Master.bank
   - /Master.strings.bank
   - /Objects.bank
-  LiveUpdatePort: 2020
+  LiveUpdatePort: 5005
   EnableMemoryTracking: 0
   AndroidUseOBB: 0
   MeterChannelOrdering: 0
