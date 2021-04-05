@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &400892642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 400892643}
+  m_Layer: 0
+  m_Name: SaxSpawnLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400892643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400892642}
+  m_LocalRotation: {x: -0.2241438, y: -0.12940963, z: 0.48296335, w: 0.8365161}
+  m_LocalPosition: {x: 273.73584, y: -32.278976, z: -185.49506}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3332054287137223508}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -14.478, y: -26.565, z: 63.435}
 --- !u!1 &3332054287137223507
 GameObject:
   m_ObjectHideFlags: 0
@@ -24,11 +54,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3332054287137223507}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -150.57184, y: 50.630978, z: 74.99506}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3332054287638001076}
+  - {fileID: 400892643}
+  - {fileID: 1011899868910796861}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -51,8 +83,14 @@ MonoBehaviour:
   clipboardPrefab: {fileID: 2007316137066489145, guid: c7d2530440aa6c3408caa37328819192,
     type: 3}
   clipboardSpawn: {fileID: 3332054287638001076}
+  saxophoneActive: 0
+  saxophonePrefab: {fileID: 4589668844262610722, guid: cbfa6b64f0cb72c4ba7d450fa4bc7a22,
+    type: 3}
+  saxophoneSpawn: {fileID: 400892643}
   OculusLeft: {fileID: 0}
   OculusRight: {fileID: 0}
+  DebugClipboard: 0
+  DebugSaxophone: 0
 --- !u!1 &3332054287638001075
 GameObject:
   m_ObjectHideFlags: 0
@@ -83,3 +121,33 @@ Transform:
   m_Father: {fileID: 3332054287137223508}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -195, z: 0}
+--- !u!1 &7322409223490571238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1011899868910796861}
+  m_Layer: 0
+  m_Name: GameStartLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1011899868910796861
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7322409223490571238}
+  m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 142.22183, y: -32.380978, z: -189.00507}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3332054287137223508}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}

@@ -20,12 +20,15 @@ public class GameManager : MonoBehaviour
     private bool clipboardActive = false;
 
     [Header("Controllers")]
+    //public GameObject PlayerObject;
+    //public Transform PlayerLocation;
     public OculusInput OculusLeft;
     public OculusInput OculusRight;
 
     [Header("Debug")]
     public bool DebugClipboard;
     public bool DebugSaxophone;
+    public bool DebugLocation;
 
     private bool allTrue = false;
 
@@ -38,6 +41,7 @@ public class GameManager : MonoBehaviour
 
         checkmarks = new bool [Puzzles.Length];
 
+        //PlayerObject = GameObject.Find("VR Rig");
         OculusLeft = GameObject.Find("Left Hand").GetComponent<OculusInput>();
         OculusRight = GameObject.Find("Right Hand").GetComponent<OculusInput>();
     }
@@ -57,7 +61,6 @@ public class GameManager : MonoBehaviour
         if(DebugSaxophone && !saxophoneActive && OculusRight.secondary)
         {
             SpawnSaxophoneAtTransform();
-            Debug.Log("Saxophone Spawned");
         }
     }
 
@@ -88,10 +91,11 @@ public class GameManager : MonoBehaviour
     
     public void SpawnSaxophoneAtTransform()
     {
-        if(!clipboardActive)
+        if(!saxophoneActive)
         {
             GameObject Saxophone = Instantiate(saxophonePrefab, saxophoneSpawn.position, saxophoneSpawn.rotation);
             saxophoneActive = true;
+            Debug.Log("Saxophone Spawned");
         }
     }
 }

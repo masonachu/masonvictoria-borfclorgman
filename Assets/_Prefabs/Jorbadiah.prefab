@@ -920,7 +920,7 @@ GameObject:
   - component: {fileID: 7184046604371538695}
   - component: {fileID: 2976456755919895219}
   - component: {fileID: 2976456755919895217}
-  - component: {fileID: 7184046604371701528}
+  - component: {fileID: 1022123336}
   m_Layer: 0
   m_Name: characterMedium
   m_TagString: HasDialogue
@@ -978,7 +978,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7184046604371701528
+--- !u!114 &1022123336
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -987,7 +987,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7184046604371701543}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a9507798db51b04c8dc492dd6325b72, type: 3}
+  m_Script: {fileID: 11500000, guid: e75de61346a56c641acf2fbf0244e366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ikActive: 1
@@ -1001,6 +1001,7 @@ MonoBehaviour:
   OculusLeft: {fileID: 0}
   OculusRight: {fileID: 0}
   dialogue: event:/Dialogue/Jorbadiah Convo
+  GM: {fileID: 0}
   PuzzleStatus: {fileID: 0}
   CryingEmitter: {fileID: 0}
 --- !u!1 &7184046604371701545

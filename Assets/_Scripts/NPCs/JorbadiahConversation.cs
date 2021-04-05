@@ -85,7 +85,7 @@ public class JorbadiahConversation : HeadController
             {
                 StopCoroutine(coroutine);
                 coroutineActive = false;
-                Debug.Log("couroutine cancelled");
+                //Debug.Log("couroutine cancelled");
             }
 
             //set bool that this character has spoken already
@@ -95,10 +95,10 @@ public class JorbadiahConversation : HeadController
 
     public IEnumerator LoadSaxophone(float waitTime)
     {
-        print("couroutine started with a time of " + waitTime);
+        //print("couroutine started with a time of " + waitTime);
         yield return new WaitForSeconds(waitTime);
         GM.SpawnSaxophoneAtTransform();
         saxophoneLoaded = true;
-        print("coroutine complete in " + waitTime);
+        //print("coroutine complete in " + waitTime);
     }
 }
