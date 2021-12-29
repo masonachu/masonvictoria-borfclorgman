@@ -43,7 +43,7 @@ public class CirclingNPCController : HeadController
         {
             emit = gameObject.AddComponent<MyStudioEventEmitter>();
 
-            OcclusionEnabled = true;
+            OcclusionEnabled = false;
             emit.ChangeEvent(convo1);
             hasDialogue = true;
         }
